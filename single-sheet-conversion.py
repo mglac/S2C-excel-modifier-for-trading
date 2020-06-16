@@ -13,34 +13,89 @@ from tkinter import Text
 
 
 def excel_modifications(filepath):
-    filename = filepath
-    wb1 = load_workbook(filename, data_only=True, read_only=True)
-    ws1 = wb1['1E']
+    initial_wb = load_workbook(filepath, data_only=True, read_only=True)
+    for ws in initial_wb:
+        if ws.title == "CORE":
+            core_compression(ws)
+        if ws.title == "Infl":
+            infl_compression(ws)
+        if ws.title != "AA" and ws.title != "CORE" and ws.title != "HYE" and ws.title != "Infl" and ws.title != "Int" and ws.title != "HYE" and ws.title != "Alts" and ws.title != "ESG" and ws.title != "ML_LTG" and ws.title != "529":
+            common_compression(ws)
 
-    # Open the destination workbook from S2C
-    wb2 = Workbook()
-    ws2 = wb2.active
-    ws2.title = "1E compressed_for_trading.xlsx"
-    ws2_securities_list = []
-    ws2_percents_list = []
 
-    for row in ws1.values:
+def common_compression(worksheet):
+    new_wb = Workbook()
+    new_ws = new_wb.active
+    new_ws.title = worksheet.title + ".xlsx"
+    new_ws_securities_list = []
+    new_ws_percents_list = []
+    for row in worksheet.values:
         current_percent = row[0]
         current_security = row[1]
         if isinstance(current_percent, float) and isinstance(current_security, str):
-            ws2_securities_list.append(str(current_security))
-            ws2_percents_list.append(current_percent)
+            new_ws_securities_list.append(str(current_security))
+            new_ws_percents_list.append(current_percent)
 
-    for i in range(len(ws2_securities_list) + 1):
+    for i in range(len(new_ws_securities_list) + 1):
         if i == 0:
-            ws2.cell(1, 1).value = 'Security'
-            ws2.cell(1, 2).value = '%'
+            new_ws.cell(1, 1).value = 'Security'
+            new_ws.cell(1, 2).value = '%'
         else:
-            ws2.cell(i+1, 1).value = ws2_securities_list[i-1]
-            ws2.cell(i+1, 2).value = ws2_percents_list[i-1]
-            ws2.cell(i+1, 1).number_format = '0.000%'
-            ws2.cell(i+1, 2).number_format = '0.000%'
-        wb2.save(str(ws2.title))
+            new_ws.cell(i+1, 1).value = new_ws_securities_list[i-1]
+            new_ws.cell(i+1, 2).value = new_ws_percents_list[i-1]
+            new_ws.cell(i+1, 1).number_format = '0.000%'
+            new_ws.cell(i+1, 2).number_format = '0.000%'
+        new_wb.save(str(new_ws.title))
+
+
+def core_compression(worksheet):
+    new_wb = Workbook()
+    new_ws = new_wb.active
+    new_ws.title = worksheet.title + ".xlsx"
+    new_ws_securities_list = []
+    new_ws_percents_list = []
+    for row in worksheet.values:
+        current_percent = row[3]
+        current_security = row[0]
+        if isinstance(current_percent, float) and isinstance(current_security, str):
+            new_ws_securities_list.append(str(current_security))
+            new_ws_percents_list.append(current_percent)
+
+    for i in range(len(new_ws_securities_list) + 1):
+        if i == 0:
+            new_ws.cell(1, 1).value = 'Security'
+            new_ws.cell(1, 2).value = '%'
+        else:
+            new_ws.cell(i+1, 1).value = new_ws_securities_list[i-1]
+            new_ws.cell(i+1, 2).value = new_ws_percents_list[i-1]
+            new_ws.cell(i+1, 1).number_format = '0.000%'
+            new_ws.cell(i+1, 2).number_format = '0.000%'
+        new_wb.save(str(new_ws.title))
+
+
+def infl_compression(worksheet):
+    new_wb = Workbook()
+    new_ws = new_wb.active
+    new_ws.title = worksheet.title + ".xlsx"
+    new_ws_securities_list = []
+    new_ws_percents_list = []
+    for row in worksheet.values:
+        current_percent = row[2]
+        current_security = row[0]
+        if isinstance(current_percent, float) and isinstance(current_security, str):
+            new_ws_securities_list.append(str(current_security))
+            new_ws_percents_list.append(current_percent)
+
+    for i in range(len(new_ws_securities_list) + 1):
+        if i == 0:
+            new_ws.cell(1, 1).value = 'Security'
+            new_ws.cell(1, 2).value = '%'
+        else:
+            new_ws.cell(i+1, 1).value = new_ws_securities_list[i-1]
+            new_ws.cell(i+1, 2).value = new_ws_percents_list[i-1]
+            new_ws.cell(i+1, 1).number_format = '0.000%'
+            new_ws.cell(i+1, 2).number_format = '0.000%'
+        new_wb.save(str(new_ws.title))
 
 
 def open_file_path():
