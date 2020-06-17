@@ -1,1 +1,1 @@
-# Seventy2 Capital Portfolio Compressor for Trading
+# Seventy2 Capital Excel Modifier for Trading
