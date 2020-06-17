@@ -34,8 +34,11 @@ See [Public Repository](https://github.com/mglac/S2C-excel-modifier-for-trading)
 
 ### What I Learned
 
- - Write MORE Tests
- - Add Night Mode
+ - Version Control with GIT and GitHub
+ - A wholistic approach to python program design intended for the use of others
+ - Using open source modules to complete a task
+ - Designing GUI's in Python using tkinter 
+ - Using OpenPyXL to modify excel spreadsheets with Python programs
 
 License
 ----
