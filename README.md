@@ -4,6 +4,7 @@ This program functions as an excel modifier for the use of [Seventy2 Capital Wea
 # How this Program Helps Seventy2 Capital Wealth Management
   - Saves hours of manual spreasheet modifications 
   - Automates the preperation of portfolios for a trade 
+  - Allows for the use of a helpful, time-saving program by people with no python knowlage through a GUI and .exe
 
 # Features
   - An installer to allow for this program to be installed and used on any computer, even one without python
@@ -39,6 +40,8 @@ See [Public Repository](https://github.com/mglac/S2C-excel-modifier-for-trading)
  - Using open source modules to complete a task
  - Designing GUI's in Python using tkinter 
  - Using OpenPyXL to modify excel spreadsheets with Python programs
+ - Creating a program installer with NSIS
+ - Compiling a Python program as an .exe
 
 License
 ----
