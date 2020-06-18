@@ -44,7 +44,7 @@ def gui():
     tkinter.Label(text="").pack()
     # Creates the button to start the script
     open_initial_file = tkinter.Button(text="Run Excel Modifiers for Trading",
-                                       height="2", width="30", font="bold",
+                                       height="2", width="30",
                                        command=run_modifiers_on_wb)
     open_initial_file.pack()
     # A step by step set of instructions to properly use the script
@@ -53,7 +53,7 @@ def gui():
                   + "\n\n     2) When the file system window opens, select "
                   + "\n           the Excel Workbook you would like to trade."
                   + "\n\n    3) Select the destination folder, then your new"
-                  + "\nyour new workbooks will be created.", font="bold").pack()
+                  + "\nyour new workbooks will be created.").pack()
     # Sets my name at the bottom of the gui above a link to the source code
     tkinter.Label(text="\n\nScript written by Mathieu Lacourciere").pack()
     # Creates a hyperlink to the github repository
