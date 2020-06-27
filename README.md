@@ -21,7 +21,7 @@ This program functions as an excel modifier for the use of [Seventy2 Capital Wea
 ### Module Used
 This program functions with the use of an open source python module:
 
-* [OpenPyXL] - Ecxel modifications through Python
+* [OpenPyXL] - Excel modifications through Python
 
 ### Installation
 
