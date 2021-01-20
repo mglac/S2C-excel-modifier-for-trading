@@ -16,9 +16,13 @@ This program functions as an excel modifier for the use of [Seventy2 Capital Wea
   - Specifying a directory to store the newly 
   
 > This program was written and designed by Mathieu Lacourciere.
+>
 > This was completed as an intern of Seventy2 Capital Wealth Management during the summer of 2020.
+>
 > Mathieu Lacourciere is an Undergraduate Computer Science Student at the University of Maryland College Park
+>
 > Expected Graduation: Spring Semester 2023
+>
 > Contact e-mail: matlac@umd.edu
 
 ### Module Used
@@ -30,7 +34,7 @@ This program functions with the use of an open source python module:
 
 - Installation for the use of the .exe can be done by downloading and running the installer
 - If you are installing this program to modify the code you will need to install Python 3.8.3+ and openpyxl 3.0.3+ 
-
+*NOTE: The version corresponding to the installer will still function, but there may be minor discrepancies with the actual repository.*
 #### Link to the Public Repository
 
 See [Public Repository](https://github.com/mglac/S2C-excel-modifier-for-trading)
