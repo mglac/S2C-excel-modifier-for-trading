@@ -34,7 +34,9 @@ This program functions with the use of an open source python module:
 
 - Installation for the use of the .exe can be done by downloading and running the installer
 - If you are installing this program to modify the code you will need to install Python 3.8.3+ and openpyxl 3.0.3+ 
+
 *NOTE: The version corresponding to the installer will still function, but there may be minor discrepancies with the actual repository.*
+
 #### Link to the Public Repository
 
 See [Public Repository](https://github.com/mglac/S2C-excel-modifier-for-trading)
