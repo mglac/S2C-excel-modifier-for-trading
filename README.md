@@ -13,7 +13,7 @@ This program functions as an excel modifier for the use of [Seventy2 Capital Wea
   - Specifying a directory to store the newly 
   
 > This program was written and designed by Mathieu Lacourciere.
-> This was completed as an intern of Seventy2 Capital Wealth Management during the summer 0f 2020.
+> This was completed as an intern of Seventy2 Capital Wealth Management during the summer of 2020.
 > Mathieu Lacourciere is an Undergraduate Computer Science Student at the University of Maryland College Park
 > Expected Graduation: Spring Semester 2023
 > Contact e-mail: matlac@umd.edu
